@@ -13,7 +13,7 @@ applies processing, and generates monthly billing reports.
 
 Create `~/dev.env` with:
 
-    VERTICA_HOST=energy-up01
+    VERTICA_HOST=energy-up01 (172.21.132.4)
     VERTICA_PORT=5433
     VERTICA_USER=energy_user
     VERTICA_PASSWORD=<secret>
