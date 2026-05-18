@@ -1,10 +1,14 @@
 #------------------------ Main Script dependencies section and environment configuration ---------------------------
 
 # Basic imports
-import io, os, re, stat, sys, csv, gc, time, logging
-from typing import Optional
+import io, os, re, stat, sys, csv, gc, time
+from typing import Optional, Union
 from dataclasses import dataclass
 from functools import partial
+
+# Events Logging 
+import logging
+from logging.handlers import RotatingFileHandler
 
 # Path utilities
 from glob import glob

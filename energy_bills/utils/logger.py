@@ -1,12 +1,10 @@
 # ----------------------- Logging of Events ---------------------------------- 
-import os, sys, logging
-from logging.handlers import RotatingFileHandler
-from typing import Union
+from utils.dependencies import os, sys, logging, RotatingFileHandler, Union
 
 class BaseLogger:
     def __init__(self, *args, **kwargs):
         self.loglevel: Union[str, int] = logging.INFO
-        self.BASE_DIR = "/tmp" if os.getenv("RSTUDIO_PRODUCT") == "CONNECT" else os.path.expanduser("/home/eyzacharis/Energy Bills/")
+        self.BASE_DIR = "/tmp" if os.getenv("RSTUDIO_PRODUCT") == "CONNECT" else os.path.expanduser(os.getcwd())
         self.LOG_DIR  = os.path.join(self.BASE_DIR, "logs")
         self.LOG_FILE = os.path.join(self.LOG_DIR, "energy_bills_automation.log")
         self.log_filepath = os.path.join(self.LOG_DIR, "energy_bills_automation.log")
