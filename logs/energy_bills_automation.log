@@ -1,0 +1,18 @@
+15-05-2026 14:19:12 INFO [data_process.load_creds:18]: Loaded credentials from environment file
+15-05-2026 14:20:26 INFO [2911747232.<module>:1]: Logging started at 2026-05-15 14:20:26.562676
+15-05-2026 14:20:26 INFO [2911747232.<module>:4]: Preparing to load tables with deault number of concurrent workers: 60
+15-05-2026 14:20:26 INFO [2911747232.<module>:7]: Reading table: energy_efficiency.pollaploi
+15-05-2026 14:20:26 WARNING [table_reader.read_vertica_table_with_multiprocessing:28]: Invalid number of workers passed. Reverting to permissible range.
+15-05-2026 14:20:26 INFO [table_reader.read_vertica_table_with_multiprocessing:31]: 
+    SELECT
+        *
+    FROM  energy_efficiency.pollaploi
+    WHERE MOD(HASH(paroxos, paroxi, etos), 24) = 
+
+15-05-2026 14:24:13 INFO [profiler._log:49]: [profiler] OK fetch_pollaploi      wall=222878.4ms  cpu=139443.1ms  peak=7832.0MB
+15-05-2026 14:24:13 INFO [2911747232.<module>:11]: Reading table: energy_efficiency.parohes_cosmote
+15-05-2026 14:24:14 INFO [profiler._log:49]: [profiler] OK fetch_parohes        wall=   251.8ms  cpu=   236.8ms  peak=   1.1MB
+15-05-2026 14:24:14 INFO [2911747232.<module>:16]: Processing data: filling N/A values, applying type casting, and creating required columns.
+15-05-2026 14:24:14 INFO [data_process._dtypes_convert:42]: Filling last_date & previous_date N/A values for final invoice and special bill type
+15-05-2026 14:29:58 INFO [data_process._dtypes_convert:106]: Fetching 52640 ektaktoi, 1551177 enanti and 868565 Ekk or Tel
+15-05-2026 14:30:02 INFO [profiler._log:49]: [profiler] OK types_conversion     wall=346061.7ms  cpu=350667.6ms  peak=7324.3MB
